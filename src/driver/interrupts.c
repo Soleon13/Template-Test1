@@ -2,10 +2,12 @@
 
 #include "stm32g4xx_hal.h"
 
-void Interrupts_init() {
+void interrupts_init()
+{
 	NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
 }
 
-void Interrupts_disable() {
+void interrupts_disable()
+{
 	__disable_irq();
 }

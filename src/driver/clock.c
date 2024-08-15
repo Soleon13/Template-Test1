@@ -4,7 +4,8 @@
 
 #include "stm32g4xx_hal.h"
 
-bool Clock_init() {
+bool clock_init()
+{
 	HAL_Init();
 
 	// Configure the main internal regulator output voltage
@@ -21,6 +22,7 @@ bool Clock_init() {
 	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
 	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
 	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+
 	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
 	{
 		return false;
@@ -51,10 +53,10 @@ bool Clock_init() {
     }
 
 	// Initialize peripheral clocks
-	__HAL_RCC_GPIOA_CLK_ENABLE();
-	__HAL_RCC_GPIOB_CLK_ENABLE();
-	__HAL_RCC_I2C1_CLK_ENABLE();
-	__HAL_RCC_FDCAN_CLK_ENABLE();
+//	__HAL_RCC_GPIOA_CLK_ENABLE();
+//	__HAL_RCC_GPIOB_CLK_ENABLE();
+//	__HAL_RCC_I2C1_CLK_ENABLE();
+//	__HAL_RCC_FDCAN_CLK_ENABLE();
 
 	return true;
 }

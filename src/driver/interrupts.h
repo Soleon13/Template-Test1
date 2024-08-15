@@ -1,4 +1,4 @@
 #pragma once
 
-void Interrupts_init();
-void Interrupts_disable();
+void interrupts_init();
+void interrupts_disable();

@@ -2,4 +2,4 @@
 
 #include <stdbool.h>
 
-bool Clock_init();
+bool clock_init();
